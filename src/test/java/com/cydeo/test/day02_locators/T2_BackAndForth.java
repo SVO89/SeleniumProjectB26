@@ -32,11 +32,12 @@ public class T2_BackAndForth {
 //      3- Click to A/B Testing from top of the list.
         WebElement abLinkText = driver.findElement(By.linkText("A/B Testing"));
         abLinkText.click();
-
+        String actualTitle = driver.getTitle();
+        System.out.println("actualTitle = " + actualTitle);
 //      4- Verify title is as expected: "No A/B Test"
         String expectedTitle = "No A/B Test";
 
-        if(abLinkText.equals(expectedTitle)){
+        if(actualTitle.equals(expectedTitle)){
             System.out.println("Title test: PASSED");
         }else{
             System.out.println("Title test: FAILED");

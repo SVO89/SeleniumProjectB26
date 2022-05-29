@@ -1,0 +1,65 @@
+XPath vs Absolute XPath
+
+ABSOLUTE XPATH
+
+-   Starts with single slash"/"
+-   It starts looking in html from the root parent element:html element
+-   Its starts from HTML tag, and it goes down 1 by 1 untill we reach the web element we are looking for.
+-   This is not a good way to find/locate web elements.
+-   It will break with minimal changes in the HTML code.
+
+Syntax:     /html/body/table/tbody/tr[2]/td/div/div/form/div[4]/button
+
+RELATIVE XPATH
+
+-   Starts with double slash "//"
+-   "//" Means you can start from anywhere in the HTML code.
+-   Since we are allowed to start from anywhere in the HTML code, relative xpath is very dependable
+-   We will use relative xpath, not absolute xpath.
+-   The only time your relative xpath is breaking/not working is when/if the developer is specifically changing  the attribute value used.
+
+Syntax:
+
+Ex: <a href="https//tesla.com" name="uh86" class="ff58" id="bb22"> TESLA CYBERTRUCK </a>
+
+-   //tagName[@attribute='value']
+-   Locate above <a> tag using relative xpath locator with different attributes.
+        using name attribute :
+        using class attribute :
+        using id attribute :
+-   We are NOT limited with id, name, class, or href attributes.
+-   We can use any custom attribute and their value with XPATH locator.
+
+COMMONLY USED XPATH SYNTAXES:
+
+1.  //tagName[@attribute='value']
+2.  //tagName[contains(@attribute, 'value')]
+3.  //tagName[.='text'] same as //tagName[text()='text']
+        .--> stands for text in xpath
+4.  //*[@attribute='value']
+
+-   *--> is used when we do not want to search by tagName.
+-   If we want to be less specific, we pass *, and it will only match and return whatever attribute and value is provided.
+
+HOW TO GO FROM CHILD TO PARENT and PARENT TO CHILD IN XPATH?
+
+-   We go from parent to child using "/" .
+-   We use "/.." to go from child to parent.
+-   We use "/following-sibling::tagname" this goes to the next sibling.
+-   We use "/preceding-sibling::tagname" this goes to the previous sibling.
+
+CSS vs XPATH
+
+-   CSS is slightly faster than xpath, on IE, on others it is negligible.
+-   CSS is easier to read and write.
+
+1.  CSS cannot locate using the text of web elements.
+        * xpath: //*[.="Don't Click!"]
+        * CSS: N/A
+2. It cannot find from matches based on index (different parent)
+        * xpath: -->(xpathFormula)[indexNumber]
+        * CSS: N/A
+3. Child to parent is not possible in CSS
+        * xpath: //button/../ --> goes back to the parent.
+        * CSS: N/A
+4.
