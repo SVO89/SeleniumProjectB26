@@ -22,15 +22,17 @@ public class T02_FindElements {
         // 4- Print out the number of the links on the page.
         System.out.println("allLinks.size() = " + allLinks.size());
         // 5- Print out the texts of the links.
+        // 6- Print out the HREF attribute values of the links
         for (int i = 0; i < allLinks.size(); i++){
             String linkText = allLinks.get(i).getText();
             System.out.println("linkText = " + linkText);
+            String hrefAttribute = allLinks.get(i).getAttribute("href");
+            System.out.println("hrefAttribute = " + hrefAttribute);
         }
         for (WebElement eachLink : allLinks) {
             System.out.println("eachLink.getText() = " + eachLink.getText());
             System.out.println("eachLink.getAttribute(\"href\") = " + eachLink.getAttribute("href"));
         }
-
         driver.quit();
     }
 }
