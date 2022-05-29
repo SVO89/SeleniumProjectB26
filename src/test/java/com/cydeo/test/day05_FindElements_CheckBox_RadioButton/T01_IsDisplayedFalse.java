@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class T1_isDisplayedFalse {
+public class T01_IsDisplayedFalse {
     public static void main(String[] args) {
 
         WebDriver driver = WebDriverFactory.getDriver("chrome");
@@ -16,6 +16,8 @@ public class T1_isDisplayedFalse {
         WebElement solarHeader = driver.findElement(By.xpath("(//h1[contains(text(),'Solar Panels')])[1]"));
 
         System.out.println("solarHeader.isDisplayed() = " + solarHeader.isDisplayed());
+
+        driver.quit();
 
 
     }
