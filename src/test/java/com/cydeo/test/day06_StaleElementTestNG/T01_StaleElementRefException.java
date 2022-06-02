@@ -1,6 +1,7 @@
 package com.cydeo.test.day06_StaleElementTestNG;
 
 import com.cydeo.test.utilities.WebDriverFactory;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
@@ -11,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 public class T01_StaleElementRefException {
     public static void main(String[] args) {
         // 1. Open Chrome browser
-        WebDriver driver = new WebDriverFactory.getDriver("chrome");
+        WebDriver driver = WebDriverFactory.getDriver("chrome");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         // 2. Go to https://practice.cydeo.com/add_remove_elements/
