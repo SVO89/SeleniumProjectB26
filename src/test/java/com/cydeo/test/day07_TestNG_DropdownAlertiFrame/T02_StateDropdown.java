@@ -59,6 +59,7 @@ public class T02_StateDropdown {
             Thread.sleep(3000);
             System.out.println("each.getText() = " + each.getText());
         }
-
+        Thread.sleep(3000);
+        languages.deselectAll();
     }
 }
