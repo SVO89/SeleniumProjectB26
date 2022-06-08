@@ -9,13 +9,13 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class T03_AlertPractice {
-    WebDriver = driver;
+    WebDriver driver;
 
     @BeforeMethod
     public void setUpMethod (){
         driver = WebDriverFactory.getDriver("chrome");
         driver.manage().window().maximize();
-        driver.manage().
+        driver.manage().timeouts();
 
     }
     @Test
