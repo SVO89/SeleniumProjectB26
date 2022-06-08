@@ -31,6 +31,9 @@ public class AlertPractices {
         // 5. Verify "You clicked: Ok" text is displayed.
         WebElement resultText = driver.findElement(By.id("result"));
         Assert.assertTrue(resultText.isDisplayed(), "result text did not appear!");
-        String actualText =
+        String actualText = resultText.getText();
+        String expectedText = "You clicked: Ok";
+        Assert.assertEquals(actualText, expectedText, "result text did not appear correctly!");
     }
+
 }
