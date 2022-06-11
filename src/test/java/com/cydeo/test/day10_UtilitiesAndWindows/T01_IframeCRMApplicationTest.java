@@ -22,9 +22,14 @@ public class T01_IframeCRMApplicationTest extends TestBase {
         // 04- Click the MORE tab and select APPRECIATION
         WebElement moreBttn = driver.findElement(By.cssSelector("span[id*='link-text']"));
         moreBttn.click();
-
+        WebElement appreciationBttn = driver.findElement(By.cssSelector("//span[.='Appreciation']"));
+        appreciationBttn.click();
         // 05- Write an Appreciation message
+        driver.switchTo().frame(driver.findElement(By.cssSelector(".bx-editor-iframe")));
+        driver.findElement(By.tagName("body")).sendKeys("Test Message 123");
         // 06- Click the SEND button
+        driver.switchTo().defaultContent();
+
         // 07- Verify the Appreciation message is displayed on the feed
 
     }
