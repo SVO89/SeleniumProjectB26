@@ -1,0 +1,38 @@
+ - 06/14/2022 -
+PROPERTIES - CONFIGURATION READER
+
+MAIN GOAL:
+- UNDERSTAND A CURRENT ISSUE WE HAVE WITH HARDCODING
+- UNDERSTANDING HOW WE CAN SOLVE THESE ISSUES
+- CREATE A PROPERTIES FILE
+- CREATE A UTILITY CLASS TO READ FROM THE PROPERTIES FILE
+- PRACTICE
+
+What is test data? It is the data we have been using in our code.
+- Definition: data created or selected to satisfy the execution preconditions and inputs to execute one or more test cases.
+- Basically all the data we select (or create) to pass AUT (Application Under Test) to verify expected output, is called test data.
+- Example: Username, password, search values, etc.
+
+How have we been passing out data so far?
+- So far we have been passing our test data directly into our tests.
+- This means we are keeping our test data inside our source code as well as HARD CODING the test data into our tests.
+
+What is hardcoding?
+- It is the practice of embedding data directly into the source code of a program or other executable object as opposed to obtaining the data from external sources, or generating it at runtime.
+
+The issue we are trying to solve:
+WE ARE HARDCODING OUR TEST DATA INTO OUR TESTS
+WE ARE REPEATING OURSELVES OVER AND OVER ENTERING THE SAME DATA
+
+To solve this problem, we will be implementing the use of a .properties file
+
+What is a properties file?
+- It is a filetype that stores data in pairs
+- There can only be one key value with
+
+Key value format is useful because
+- Key part will be stored in the .java classes, so it will be HARDCODED
+- Value part will bes stored in the .properties so the file and will NOT BE HARDCODED
+
+The DATA we will be storing in the configuration.properties is going to be the kind of data that will be able to change the flow of the execution of our test suites.
+
