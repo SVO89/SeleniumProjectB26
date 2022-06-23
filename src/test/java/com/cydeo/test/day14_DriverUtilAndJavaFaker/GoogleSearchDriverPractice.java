@@ -11,14 +11,14 @@ public class GoogleSearchDriverPractice {
     @Test
     public void googleSearchDriverPractice(){
         // Go to "https://www.google.com/"
-        Driver.getDriver().get("https://www.google.com");
+   //     Driver.getDriver().get("https://www.google.com");
         // Write “apple” in search box
-        WebElement searchBox = Driver.getDriver().findElement(By.name("q"));
-        searchBox.sendKeys("apple");
+   //     WebElement searchBox = Driver.getDriver().findElement(By.name("q"));
+   //     searchBox.sendKeys("apple");
         // Verify title:
         //Expected: apple - Google Search
-        String actualTitle = Driver.getDriver().getTitle();
+   //     String actualTitle = Driver.getDriver().getTitle();
         String expectedTitle = "apple - Google Search";
-        Assert.assertEquals(actualTitle,expectedTitle);
+    //    Assert.assertEquals(actualTitle,expectedTitle);
     }
 }
